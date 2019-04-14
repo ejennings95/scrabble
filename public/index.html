@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8">
+    <title>Scrabble Calculator</title>
+  </head>
+  <body>
+    <div class="col-md-5 mx-auto">
+      <div class="jumbotron" style="margin-top: 50px; background-color: #f8f8e6; padding: 25px; border-radius: 25px;">
+        <div style="padding: 50px; display: inline-block;">
+        <h1 id="word">SCRABBLE</h1>
+        <h1 id="titlescore">Live Score:</h1>
+        <h2 id="score"></h2>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="letterBonus" id="none" value="1">
+          <label class="form-check-label" for="none">None</label><br>
+          <input type="radio" class="form-check-input" name="letterBonus" id="DLS" value="2">
+          <label class="form-check-label" for="DLS">Double Letter Score</label><br>
+          <input type="radio" class="form-check-input" name="letterBonus" id="TLS" value="3">
+          <label class="form-check-label" for="TLS">Triple Letter Score</label>
+         </div>
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="A" value="A">A</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="B" value="B">B</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="C" value="C">C</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="D" value="D">D</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="E" value="E">E</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="F" value="F">F</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="G" value="G">G</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="H" value="H">H</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="I" value="I">I</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="J" value="J">J</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="K" value="K">K</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="L" value="L">L</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="M" value="M">M</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="N" value="N">N</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="O" value="O">O</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="P" value="P">P</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="Q" value="Q">Q</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="R" value="R">R</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="S" value="S">S</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="T" value="T">T</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="U" value="U">U</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="V" value="V">V</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="W" value="W">W</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="X" value="X">X</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="Y" value="Y">Y</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-secondary" id="Z" value="Z">Z</button>
+            </div>
+          </div>
+
+          <div class="form-group" style="display: inline-block;">
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="DWS1">
+              <label class="custom-control-label" for="DWS1">Double Word Score</label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="DWS2">
+              <label class="custom-control-label" for="DWS2">Double Word Score</label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="TWS1">
+              <label class="custom-control-label" for="TWS1">Triple Word Score</label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="TWS2">
+              <label class="custom-control-label" for="TWS2">Triple Word Score</label>
+            </div>
+            <div class="custom-checkbox">
+              <button type="submit" class="btn btn-primary" id="submit">Process Final Score</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="startAgain">Start Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./src/letterScore.js"></script>
+    <script src="./src/wordScore.js"></script>
+    <script src="./src/game.js"></script>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
