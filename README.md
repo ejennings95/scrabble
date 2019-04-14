@@ -29,3 +29,17 @@ To run this you need to:
   - Available on:
     - http://127.0.0.1:8080
     - http://192.168.1.227:8080
+
+#### screenshots of final product
+
+##### Homepage
+![Homepage](public/images/homepage.png)
+
+##### Special letter scores
+![Special letter score](public/images/speciallettertile.png)
+
+##### Triple word score
+![Triple word score](public/images/triplewordscore.png)
+
+##### Responsive homepage
+![Responsive homepage](public/images/responsivepage.png)
